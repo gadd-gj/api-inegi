@@ -8,10 +8,10 @@ LABEL maintainer="zS18003180@estudiantes.uv.mx"
 VOLUME /tmp
 
 # Make port 8080 available to the world outside this container
-EXPOSE 5051
+EXPOSE 8080
 
 # The application's jar file
-ARG JAR_FILE=target/SpringBootJwtAuthenticationApplicationTests.java
+ARG JAR_FILE=target/SpringBootJwtAuthentication-0.0.1.jar
 
 # Add the application's jar to the container
 ADD ${JAR_FILE} ng5-api.jar

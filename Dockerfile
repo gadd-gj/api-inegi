@@ -24,3 +24,10 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/ng5-api.ja
 
 # docker run
 # sudo docker run --name <linuxuser>-api -p 8xxx:8080 -d <dockerhub-user>/ng5-api 
+
+FROM adoptopenjdk/openjdk11
+VOLUME /redis-service
+ARG JAR_FILE=target/redis-0.0.1-SNAPSHOT.jar
+ADD ${JAR_FILE} redis-service.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "/redis-service.jar"]

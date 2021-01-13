@@ -2,7 +2,7 @@ package com.grokonez.jwtauthentication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-//Barcnh release here
+
 @SpringBootApplication
 public class SpringBootJwtAuthenticationApplication {
 
